@@ -27,7 +27,8 @@ RUN         dpkg --add-architecture i386 \
 RUN         mkdir -pm755 /etc/apt/keyrings
 RUN         wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
 RUN         wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/debian/dists/bullseye/winehq-bullseye.sources
-RUN         apt install -y --install-recommends winehq-stable
+RUN         apt-get update
+RUN         apt-get  install -y --install-recommends winehq-stable
 
 # Add unicode support
 RUN         locale-gen en_US.UTF-8
