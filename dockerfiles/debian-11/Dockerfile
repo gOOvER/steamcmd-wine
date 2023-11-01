@@ -97,8 +97,8 @@ RUN         apt install -y \
                 libsdl1.2debian:i386 \
                 libsdl2-2.0-0 \
                 libsdl2-2.0-0:i386 \
-                libssl3 \
-                libssl3:i386 \
+                libssl1.1 \
+                libssl1.1:i386 \
                 libstdc++6 \
                 libstdc++6:i386 \
                 libtcmalloc-minimal4 \
