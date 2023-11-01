@@ -27,7 +27,92 @@ RUN         mkdir -pm755 /etc/apt/keyrings
 RUN         wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
 RUN         wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/focal/winehq-focal.sources
 RUN         apt-get update
-RUN         apt-get  install -y --install-recommends winehq-stable
+RUN         apt-get  install -y --install-recommends winehq-stable cabextract wine-binfmt
+RUN         apt install -y \
+                alsa-tools \
+                ca-certificates \
+                curl \
+                dbus \
+                dirmngr \
+                g++ \
+                gcc \
+                gdb \
+                git \
+                git-lfs \
+                gnupg \
+                gnupg2 \
+                gnutls-bin \
+                iproute2 \
+                jq \
+                locales \
+                mesa-utils \
+                net-tools \
+                netcat-openbsd \
+                numactl \
+                psmisc \
+                python3 \
+                python3-dev \
+                python3-pip \
+                sed \
+                software-properties-common \
+                speex:i386 \
+                tar \
+                telnet \
+                tini \
+                tzdata \
+                wget \
+                winbind \
+                xauth \
+                xvfb \
+                lib32gcc-s1-amd64-cross \
+                libgcc-s1-amd64-cross \
+                lib32stdc++6 \
+                lib32tinfo6 \
+                lib32z1 \
+                libao-common \
+                libasound2 \
+                libatk1.0-0 \
+                libc++1 \
+                libc6 \
+                libcurl4 \
+                libcurl4-gnutls-dev:i386 \
+                libcurl4:i386 \
+                libfontconfig1 \
+                libgcc1 \
+                libgconf-2-4 \
+                libgdiplus \
+                libgdiplus \
+                libgtk2.0-0:i386 \
+                libncurses5-dev:i386 \
+                libncurses5:i386 \
+                libncurses6 \
+                libnss-wrapper \
+                libnss-wrapper:i386 \
+                libnss3 \
+                libntlm0 \
+                libpangocairo-1.0-0 \
+                libpulse-dev \
+                libsdl1.2debian \
+                libsdl1.2debian:i386 \
+                libsdl2-2.0-0 \
+                libsdl2-2.0-0:i386 \
+                libssl3 \
+                libssl3:i386 \
+                libstdc++6 \
+                libstdc++6:i386 \
+                libtcmalloc-minimal4 \
+                libtinfo6:i386 \
+                libxcomposite1 \
+                libxcursor1 \
+                libxdamage1 \
+                libxi6 \
+                libxrandr2 \
+                libxss1 \
+                libxtst6
+
+# Set up Winetricks
+RUN	            wget -q -O /usr/sbin/winetricks https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
+RUN             chmod +x /usr/sbin/winetricks
 
 # Add unicode support
 RUN         locale-gen en_US.UTF-8
