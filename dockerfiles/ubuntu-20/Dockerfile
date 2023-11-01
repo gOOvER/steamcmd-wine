@@ -87,7 +87,6 @@ RUN         apt install -y \
                 libncurses5:i386 \
                 libncurses6 \
                 libnss-wrapper \
-                libnss-wrapper:i386 \
                 libnss3 \
                 libntlm0 \
                 libpangocairo-1.0-0 \
