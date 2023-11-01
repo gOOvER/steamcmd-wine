@@ -5,7 +5,8 @@ FROM        ubuntu:20.04
 
 # Set environment variables
 ENV         USER root
-ENV         HOME /root
+ENV         HOME /pufferpanel
+ENV         WINEPREFIX=/pufferpanel/.wine
 
 # Set working directory
 WORKDIR     $HOME

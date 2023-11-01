@@ -5,7 +5,8 @@ FROM        debian:12-slim
 
 # Set environment variables
 ENV         USER root
-ENV         HOME /root
+ENV         HOME /pufferpanel
+ENV         WINEPREFIX=/pufferpanel/.wine
 
 # Set working directory
 WORKDIR     $HOME
