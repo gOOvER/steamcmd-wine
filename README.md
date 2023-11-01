@@ -31,16 +31,7 @@ have a look at [steamcmd.net](https://www.steamcmd.net).
 *   [`alpine-3`, `alpine`](dockerfiles/alpine-3/Dockerfile)
 *   [`rocky-9`, `rocky`](dockerfiles/rocky-9/Dockerfile)
 *   [`rocky-8`](dockerfiles/rocky-8/Dockerfile)
-*   [`centos-9`, `centos`](dockerfiles/centos-9/Dockerfile)
-*   [`centos-8`](dockerfiles/centos-8/Dockerfile)
-*   [`windows-1909`](dockerfiles/windows-1909/Dockerfile) *(unavailable)*
-*   [`windows-1903`](dockerfiles/windows-1903/Dockerfile) *(unavailable)*
-*   [`windows-1809`, `windows`](dockerfiles/windows-1809/Dockerfile)
-*   [`windows-core-2019`, `windows-core`](dockerfiles/windows-core-2019/Dockerfile)
-*   [`windows-core-1909`](dockerfiles/windows-core-1909/Dockerfile) *(unavailable)*
-*   [`windows-core-1903`](dockerfiles/windows-core-1903/Dockerfile) *(unavailable)*
-*   [`windows-core-1809`](dockerfiles/windows-core-1809/Dockerfile)
-
+*  
 > ***Note:***
 > *Some Windows tags are not available (yet) because they cannot be*
 > *build on the current Github Actions Windows Platform. The Dockerfiles are*
