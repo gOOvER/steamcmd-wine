@@ -115,6 +115,13 @@ RUN         apt install -y \
 RUN	            wget -q -O /usr/sbin/winetricks https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
 RUN             chmod +x /usr/sbin/winetricks
 
+# Set Display
+ENV             WINEDLLOVERRIDES="mscoree,mshtml="
+ENV             DISPLAY=:0
+ENV             DISPLAY_WIDTH=1024
+ENV             DISPLAY_HEIGHT=768
+ENV             DISPLAY_DEPTH=16
+
 # Add unicode support
 RUN         locale-gen en_US.UTF-8
 ENV         LANG 'en_US.UTF-8'
