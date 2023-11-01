@@ -23,19 +23,7 @@ jobs:
     with:
       name: ubuntu-20
       tags: ubuntu-focal
-  ubuntu-18:
-    uses: ./.github/workflows/_build-linux.yml
-    secrets: inherit
-    with:
-      name: ubuntu-18
-      tags: ubuntu-bionic
-  ubuntu-16:
-    uses: ./.github/workflows/_build-linux.yml
-    secrets: inherit
-    with:
-      name: ubuntu-16
-      tags: ubuntu-xenial
-
+  
   ## linux / debian
   debian-12:
     uses: ./.github/workflows/_build-linux.yml
@@ -49,33 +37,3 @@ jobs:
     with:
       name: debian-11
       tags: debian-bullseye
-  debian-10:
-    uses: ./.github/workflows/_build-linux.yml
-    secrets: inherit
-    with:
-      name: debian-10
-      tags: debian-buster
-
-  ## linux / alpine
-  alpine-3:
-    uses: ./.github/workflows/_build-linux.yml
-    needs: ubuntu-22
-    secrets: inherit
-    with:
-      name: alpine-3
-      tags: alpine
-
-  ## linux / rocky
-  rocky-9:
-    uses: ./.github/workflows/_build-linux.yml
-    needs: ubuntu-22
-    secrets: inherit
-    with:
-      name: rocky-9
-      tags: rocky
-  rocky-8:
-    uses: ./.github/workflows/_build-linux.yml
-    needs: ubuntu-22
-    secrets: inherit
-    with:
-      name: rocky-8
